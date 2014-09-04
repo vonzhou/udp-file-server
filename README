@@ -1,0 +1,40 @@
+
+The UDP server recvs the datagram(fingerprint and chunk) from clients,
+and then organize them elegantly.
+
+
+log:
+1.The basic version recving one gram a time.(done)
+
+2.To organize the file's index.
+
+3. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
