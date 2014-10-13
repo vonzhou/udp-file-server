@@ -1,4 +1,4 @@
-all: server tcp-server
+all: server tcp-server client tcp-client
 server: sha1.o recipe.o rabin.o file_transfer_server.o backup.o wrapunix.o wrapsock.o  writen.o error.o
 	gcc -o server sha1.o recipe.o rabin.o file_transfer_server.o backup.o wrapunix.o writen.o error.o  wrapsock.o  -lssl -lcrypto
 tcp-server: sha1.o recipe.o rabin.o tcp_server.o backup.o wrapunix.o wrapsock.o  writen.o error.o
@@ -14,6 +14,7 @@ file_transfer_server.o : file_transfer_server.c global.h
 	gcc -c file_transfer_server.c
 tcp_server.o : tcp_server.c global.h
 	gcc -c tcp_server.c
+
 backup.o : backup.c global.h
 	gcc -c backup.c
 wrapsock.o:wrapsock.c global.h
